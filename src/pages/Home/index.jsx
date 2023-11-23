@@ -1,11 +1,13 @@
-
-
-
-
-
-
-
-
+import data from "../../data/data.json"
+function Home() {
+  data.forEach(e=> {console.log(e)})
+  return <div>Page d'accueil</div>
+}
+// import data from './components/data';
+// data = json.parse()
+// let data = []
+// data.forEach(element) => console.log(element)
+export default Home
 
 
 
