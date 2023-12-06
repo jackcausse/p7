@@ -1,8 +1,20 @@
-function Error() {
-    return (<div>
-        <h1>oups! la page que vous avez demandé n'existe pas page n'existe pas.</h1>
-    </div>
-    )
-}
+import { Navlink } from "react-router-dom"
+import React from react
 
-export default Error
+// import data from '../../data/data.json'
+// import { useRouteError } from "react-router-dom";
+
+ function Error() {
+  const error = useRouteError();
+  console.error(error);
+  return (
+       <main>
+               <div className='Error'>
+               <h1>404</h1>
+            <h2>Oups! la page que vous avez demandez n'existe pas.</h2>
+            <link to='/'>Retourner sur la page d’accueil</link>
+            </div>
+            </main> 
+              
+  )
+}
