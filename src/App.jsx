@@ -2,18 +2,16 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 // import './index.css'
-
-import Navbar from './components/Navbar.jsx'
-// import './App.css'
-
+// import Navbar from '../components/Navbar'
+// import Navbar from '../components/Navbar.jsx'
 function App() {
   return (
     <div>
-      <Navbar />
-      <Main>
-        <Banner />
-        <AppartmentGrid />
-      </Main>
+      {/* <main> */}
+        {/* <Navbar /> */}
+        {/* <Banner /> */}
+        {/* <AppartmentGrid /> */}
+      {/* </main> */}
     </div>
   )
 }

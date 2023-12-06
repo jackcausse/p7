@@ -1,9 +1,9 @@
 import React from 'react'
 
-function index() {
+function Card() {
   return (
     <div>index</div>
   )
 }
 
-export default index
+export default Card

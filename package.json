@@ -12,7 +12,8 @@
     "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "webpack": "^5.89.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -33,6 +34,8 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-react": "^7.23.3",
+    "sass": "^1.69.5"
   }
 }
