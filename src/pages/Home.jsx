@@ -1,25 +1,24 @@
 import React from 'react'
-import data from '../data/data.json'
-import '../styles/navbar.css'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import Banner from '../components/Banner'
-import Header from  '../components/Header'
+import Header from '../components/Header.jsx'
+import Banner from '../components/Banner.jsx'
+import Footer from '../components/Footer.jsx'
+// import bannerHome from '../assets/bannerHome.jpg'
 
 function Home() {
-  data.forEach((e) => {
-    console.log(e)
-  })
+  // data.forEach((e) => {
+  //   console.log(e)
+  // })
   return
+<div>
+  {/* <Header /> */}
+  <Banner />
   <div>
-    <Header />
-    <Banner />
-    <div className="Banner">
-      <h1>'Chez vous, partout et ailleurs'</h1>
-    </div>
-    <Card />
-    <Footer />
+    Home
+    
   </div>
+  <Card />
+  <Footer />
+</div>
 }
 
 export default Home

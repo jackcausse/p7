@@ -12,8 +12,10 @@
     "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.1",
+    "util": "^0.12.5",
     "web-vitals": "^2.1.4",
-    "webpack": "^5.89.0"
+    "webpack": "^5.89.0",
+    "prettier.singleQuote": "true"
   },
   "scripts": {
     "start": "react-scripts start",
