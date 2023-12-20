@@ -1,0 +1,6 @@
+@import './variables.scss';
+
+.main {
+    border: 3px solid red($color: #be1a67);
+    padding-inline: 3rem;
+}

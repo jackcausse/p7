@@ -1,0 +1,24 @@
+@import './variables.scss';
+
+.footer {
+  display: grid;
+  align-items: center;
+  place-items: center;
+  padding: 21px;
+  margin-top: 50rem;
+  min-height: 100px;
+  color: $color-3;
+  background-color: $color-2;
+
+  .footer__logo {
+    filter: brightness(10);
+    // height: 40px;
+  }
+
+  .footer__text {
+    font-size: 20px;
+    margin-top: 20px;
+    // margin-bottom: 15px;
+    width:'100'
+  }
+}

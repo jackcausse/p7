@@ -1,0 +1,21 @@
+// @import url('https:fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+
+@import './variables.scss';
+// @import './pages/home.scss';
+// @import './pages/card.scss';
+// @import './pages/about.scss';
+// @import './pages/error.scss';
+@import './header.scss';
+@import './error.scss';
+@import './footer.scss';
+@import './banner.scss';
+@import './about.scss';
+@import './apartGrid.scss';
+@import './main.scss';
+@import './apartment.scss';
+body {
+    margin:0;
+    padding: 0;
+  font-family:'Montserrat', sans-serif ;
+}

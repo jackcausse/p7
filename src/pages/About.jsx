@@ -1,10 +1,10 @@
 import React from 'react'
-import Header from '../components/Header.jsx'
+
 
 function About() {
   return (
-    <div>
-      <Header />
+    <div className='about'>
+    <banner></banner>
     </div>
   )
 }

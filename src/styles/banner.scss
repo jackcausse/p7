@@ -1,0 +1,72 @@
+@import './variables.scss';
+
+.banner {
+  position: relative;
+  background-image: url('../assets/bannerHome.jpg');
+  background-position: center;
+  background-size: cover;
+  max-width:100%;
+  min-height: 140px;
+  margin: auto;
+  border-radius: 2rem;
+  display: grid;
+  place-items: center;
+  color: $color-3;
+  padding-inline: 2rem;
+margin-bottom: 2rem;
+}
+
+.banner::after {
+  position: absolute;
+  content: '';
+  // prend la même position que son parent
+  inset: 0;
+  // =
+  // left: 0;
+  // top: 0;
+  // width: 100%;
+  // height: 100%;
+  opacity: 0, 5;
+  border-radius: 2rem;
+}
+
+// .banner {
+//   margin-top: 30px;
+//   height: 223px;
+//   color: $color-3;
+//   border-radius: 25px;
+//   box-shadow: 0px, 5px, 15px, rgb(55, 58, 58);
+// }
+
+// .banner-home {
+//   background: url ('../assets/bannerBlack.png'), url('../assets/bannerHome.jpg');
+//   background-position: center;
+//   background-size: cover;
+//   border-radius: 25px;
+// }
+
+// .banner-about {
+//   background: url ('../assets/bannerBlack.png'),
+//     url ('../assets/bannerAbout.jpg');
+//   background-position: center;
+//   background-size: cover;
+//   border-radius: 25px;
+// }
+// @import 'variables.scss' ;
+// .banner {
+//     max-width: 100vw;
+//     padding-inline: 2rem;
+// object-fit: cover;
+// border-radius: 25px;
+// // opacity: 0.3;
+// // background: #000;
+// // mix-blend-mode: darken;
+// &__img {
+
+//         width: 100%;
+//         filter: brightness(50%);
+//         border-radius: 25px;
+//         height: 223px;
+//         object-fit: cover;
+// }
+// }
