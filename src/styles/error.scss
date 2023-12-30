@@ -4,25 +4,21 @@
   color: $color-1;
   text-align: center;
 
+  h1 {
+    font-size: 10rem;
+    margin-bottom: 0.5rem;
+  }
 
-    h1 {
-      font-size: 10rem;
-      margin-bottom: 0.5rem;
-    }
+  h2 {
+    font-size: 28px;
+    font-weight: 500;
+  }
 
-    h2 {
-      font-size: 28px;
-      font-weight: 500;
-    }
-
-    a {
-      
-        color: $color-1;
-        // text-decoration: none;
-        // &:hover {
-          text-decoration: underline;
-        // }
-      
-    }
-  
+  a {
+    color: $color-1;
+    // text-decoration: none;
+    // &:hover {
+    text-decoration: underline;
+    // }
+  }
 }

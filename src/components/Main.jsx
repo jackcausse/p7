@@ -4,7 +4,7 @@ function Main({ children }) {
     // const children = props.children
     // console.log('children', children)
   return (
-      <div className='main'>{children}</div>
+      <div className='main'>{ children }</div>
   )
 }
 

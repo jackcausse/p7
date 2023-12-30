@@ -1,22 +1,32 @@
 @import './variables.scss';
 
 .apartment {
-    columns: $color-1;
-    // background: linear-gradient(to top, 180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
-  border-radius: 1rem;
-  display: grid;
-  flex-basis: 30%;
-  align-items: end;
-  min-width: 200px;
-  min-height: 200px;
-}
+ color: $color-1;
+ background-image: linear-gradient(180deg, #FF6060, #FF6060, #FF6060, #833131);
+  // background-image: linear-gradient(to top, 180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
+ border-radius: 1rem;
+
+//  display: grid;
+flex-basis: 30%;
+ align-items: end;
+ min-width: 200px;
+ min-height: 200px;
+//  position: absolute ;
+//  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+// grid-column-gap: 50px;
+    // grid-row-gap: 50px;
+ }
 .apart_title {
-  width: 50%;
-  border-radius: 1rem;
-  margin-inline-start: 0, 5rem;
-  margin-block-end: 0.5rem;
+  // width: 50%;
+  // border-radius: 1rem;
+  // margin-inline-start: 0, 5rem;
+  // margin-block-end: 0.5rem;
   color: $color-3;
+  margin: 1rem;
   font-size: 18px;
+  
+  
+  position: relative;
 }
 
 @media screen and (width <= 768px) {

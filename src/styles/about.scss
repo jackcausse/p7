@@ -1,1 +1,22 @@
 @import './variables.scss';
+
+// .about_bend {
+//     color: $color-1;
+//     display: flex;
+//     height: 100%;
+//     width: 100%;
+//     margin: 40px 10%;
+// }
+
+.about_bend{
+    width: 80%;
+    margin: 40px 10%;
+    background-color: aqua;
+}
+
+@media screen and (max-width: 700px) {
+    .about_bend{
+        width: 95%;
+        margin: 40px 2.5%;
+    }  
+}
