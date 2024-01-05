@@ -1,16 +1,14 @@
 import React from 'react'
 
-import { useSearchParams } from 'react-router-dom'
-import Main from '../components/Main.jsx'
-import Bend from '../components/Bend.jsx'
+import {useSearchParams} from 'react-router-dom'
+import Main from '../Layout/Main.jsx'
+
 import Error from '../pages/Error.jsx'
-// import datas from '../data/data.json'
-
-
+import datas from '../data/datas.json'
 
 const Card = () => {
   return (
-    <Main>
+    <Main className='up'>
       <div className='card'>card</div>
     </Main>
   )

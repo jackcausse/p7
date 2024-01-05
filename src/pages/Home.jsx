@@ -1,7 +1,7 @@
 import React from 'react'
 import Banner from '../components/Banner.jsx'
 import Cards from '../components/Cards.jsx'
-import Main from '../components/Main.jsx'
+import Main from '../Layout/Main.jsx'
 import bannerHome from '../assets/bannerHome.jpg'
 import datas from '../data/datas.json'
 import {NavLink} from 'react-router-dom'
@@ -12,11 +12,10 @@ const Home = () => {
   // })
   return (
     <div className='home'>
-      <Main>
+      <Main className='up'>
         <Banner img={bannerHome} text='Chez vous partout et ailleurs' />
         <div className='cards'>
           {datas.map((index) => (
-            // <NavLink key={index.id} to={'/index/' + index.id + '#'}>
             <NavLink key={index.id} to={`/index/${index.id}`}>
               <Cards
                 key={index.id}

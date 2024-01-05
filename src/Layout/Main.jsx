@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Main({ children }) {
+function Main ({ children }) {
     // const children = props.children
     // console.log('children', children)
   return (

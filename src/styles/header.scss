@@ -9,6 +9,7 @@
   gap: 2rem;
   margin: 2rem;
 
+
   // avec le chevron, la règle s'applique seulement aux enfants direct
   & > *:first-child {
     margin-right: auto;
@@ -16,6 +17,7 @@
 
   & a {
     text-decoration: none;
+    font-size: 24px;
     color: $color-1;
     // & ::hover {
     // //  text-decoration: underline;
@@ -26,62 +28,4 @@
   }
 }
 
-// .header__logo {
-//   margin-right: auto;
-// }
 
-// .header {
-//   display: flex;
-//   justify-content: space-between;
-//   flex: wrap;
-//   align-items: center;
-//   margin-bottom: 20px;
-//    padding: 0,2rm;
-//   margin: 0;
-//   padding: 0.2rem;
-//   // border: 2px solid $color-1;
-
-//   &.header__logo {
-//     margin-right: auto;
-//     margin-left: 20px;
-//     margin-top: 20px;
-//     // width: 145px;
-//     // height: 47px;
-//   }
-
-//   &.header__nav {
-//     list-style-type: none;
-//     display: flex;
-//     gap: 40px;
-//     color: $text-color;
-//     &_link {
-//       font-size: 24px;
-//       text-decoration: none;
-
-//       ul {
-//         display: flex;
-//         margin: 30px;
-//         justify-content: space-between;
-
-//         a {
-//           text-decoration: none;
-//           color: $color-1;
-//           li {
-//             color: $color-1;
-//             font-size: 24px;
-//             font-style: normal;
-//             font-weight: 500;
-//             width: 150px;
-//             height: 34px;
-//             list-style-type: none;
-//           }
-//         }
-
-//         &.nav-active {
-//           text-decoration: underline;
-//           color: $color-1;
-//         }
-//       }
-//     }
-//   }
-// }
