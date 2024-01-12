@@ -3,29 +3,50 @@
 .header {
   display: flex;
   align-self: center;
-  padding: 0 2rem;
+  text-align: center;
   color: $color-1;
   font-weight: 700;
-  gap: 2rem;
-  margin: 2rem;
-
-
-  // avec le chevron, la règle s'applique seulement aux enfants direct
-  & > *:first-child {
-    margin-right: auto;
+  margin: 40px 100px 0px 100px;
+  height: 69px;
+  justify-content: space-between;
+  
+  & .logo {
+    margin-top: 1px;
   }
-
+  & .header-logo {
+    height: 68px;
+    flex-shrink: 0;
+    align-self: center;
+  }
+  & ul {
+    display: flex;
+    gap: 2rem;
+  }
+  & li {
+    list-style: none;
+  }
   & a {
-    text-decoration: none;
     font-size: 24px;
+    font-weight: 500;
+    line-height: 34px;
+    text-align: right;
+    text-decoration: none;
     color: $color-1;
-    // & ::hover {
-    // //  text-decoration: underline;
-    // }
   }
   & .nav-active {
     text-decoration: underline;
   }
 }
 
+@media (max-width: 1001px) {
+  // .header  { text-transform: uppercase; }
+  .header-logo {
+    height: 45px;
+  }
+  //     .header { font-size: 12px; }
+  .header ul {
+    gap: 10px;
+  }
 
+  //     .header nav {   justify-content: center; }
+}
