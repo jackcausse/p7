@@ -27,20 +27,18 @@
   object-fit: cover;
   width: 100%;
   filter: brightness(0.8);
-  opacity: 0, 30;
-  row-gap: 1em;
+  opacity: 0.5, 30;
 }
 .card-title {
   color: $color-3;
   margin: 1rem;
   font-size: 18px;
+  position: absolute;
   font-weight: 500;
   bottom: 0;
   width: 100;
-  line-height: 142.6%;
-  position: absolute;
-  width: 340px;
   height: 35px;
+  line-height: 142.6%;
 }
 
 @media (max-width: 1000px) {

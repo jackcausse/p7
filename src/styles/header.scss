@@ -4,33 +4,32 @@
   display: flex;
   align-self: center;
   text-align: center;
+  justify-content: space-between;
   color: $color-1;
   font-weight: 700;
   margin: 40px 100px 0px 100px;
   height: 69px;
-  justify-content: space-between;
+  
   
   & .logo {
-    margin-top: 1px;
-  }
-  & .header-logo {
-    height: 68px;
+      height: 68px;
     flex-shrink: 0;
     align-self: center;
+    margin-top: 10px;
   }
+
   & ul {
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
   }
   & li {
     list-style: none;
   }
   & a {
+    text-decoration: none;
     font-size: 24px;
     font-weight: 500;
     line-height: 34px;
-    text-align: right;
-    text-decoration: none;
     color: $color-1;
   }
   & .nav-active {

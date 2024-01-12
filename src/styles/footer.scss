@@ -3,31 +3,28 @@
 .footer {
   background-color: $color-2;
   display: flex;
-  padding: 74px 64px 9px 3px;
-  padding: 21px;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   height: 210px;
-gap: 28.556px;
+  width: 100%;
   .footer-logo {
-    // filter: brightness(10);
-    height: 30px;
-     height: 40px;
+    height: 40px;
+    width: 123px;
     margin-top: 68px;
+     filter: brightness(20);
   }
 
   .footer-text {
     font-size: 24px;
-    color: $color-3;
-    margin-top: 12px;
+    margin-top: 40px;
     text-align: center;
-    width: 100%;
+    color: $color-3;
+    filter: brightness(20);
   }
 }
 @media (max-width: 1000px) {
-   .footer-logo {
-  height: 50px;
-   width: 122px;
-   }
+  .footer-logo {
+    height: 50px;
+    width: 122px;
+  }
 }

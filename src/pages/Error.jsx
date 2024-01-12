@@ -3,8 +3,7 @@ import {useRouteError, Link} from 'react-router-dom'
 import Main from '../Layout/Main.jsx'
 
 function Error() {
-  const error = useRouteError()
-  console.error(error)
+
   return (
    
       <div className='error'>
