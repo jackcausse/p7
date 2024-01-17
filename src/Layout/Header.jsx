@@ -5,8 +5,16 @@ function Header() {
   return (
     <div className='header'>
       <div className='header-logo'>
-        {/* Sans source le navigateur va chercher le logo dans le dossier public */}
-        <img className='logo' src='logo.png' alt='logo Kasa' />
+        {/* {' '}
+        <ul>
+          <li>
+            {' '} */}
+            <NavLink to='/'>
+              {/* Sans source le navigateur va chercher le logo dans le dossier public */}
+              <img className='logo' src='logo.png' alt='logo Kasa' />
+             </NavLink>
+          {/* </li>
+         </ul>{' '}  */}
       </div>
 
       <div className='header-nav'>

@@ -13,7 +13,7 @@ const Home = () => {
 
   return (
     <div className='home'>
-      <Main className='up'>
+      <Main >
         <Banner img={bannerHome} text='Chez vous, partout et ailleurs' />
         <div className='cards'>
           {datas.map((index) => (

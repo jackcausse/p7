@@ -2,7 +2,7 @@ import {useState} from 'react'
 // import React, {useState} from 'react'
 import arrowDown from '../assets/arrowDown.png'
 
-const DropDown = ({title, description}) => {
+const DropDown = ({title, content}) => {
   //creation du useState pour l'ouverture et la fermeture du drop  de base > fermé
   const [open, setOpen] = useState(false)
 
@@ -21,7 +21,7 @@ const DropDown = ({title, description}) => {
           </span>
         </div>
      
-        <div className='dropdown-content'>{description}</div>
+        <div className='dropdown-content'>{content}</div>
       </div>
     
   )
