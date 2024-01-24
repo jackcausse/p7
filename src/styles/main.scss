@@ -1,10 +1,10 @@
 @import './variables.scss';
 
 .main {
-   border: 2px solid rgb(202, 92, 92);
-  padding: 2rem 6.25rem .8rem 5rem;
+  padding: 2rem 5rem 8rem 5rem;
 }
 @media screen and (max-width: 1001px) {
 .main {
+  border: 2px solid rgb(202, 92, 92);
   padding: 1em;
 }}

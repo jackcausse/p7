@@ -1,61 +1,78 @@
 @import './variables.scss';
 
 .header {
-  border: 2px solid rgb(202, 92, 92);
   display: flex;
   align-self: center;
   text-align: center;
   justify-content: space-between;
-  color: $color-1;
+  // color: $color-1;
   font-weight: 700;
   height: 69px;
-  padding: 20px 100px 50px 80px;
+  // height: 100%;
+  padding: 20px 80px 50px 80px;
   & .logo {
     // height: 68px;
+    // display: block;
     flex-shrink: 0;
     margin-top: 20px;
+    // margin: 0;
+    
   }
-
   & ul {
     display: flex;
     gap: 4rem;
+    margin: 0;
+    & li {
+      list-style: none;
+      font-size: 24px;
+      // padding-bottom: 4px;
+      // margin: 0;
+      & a {
+        text-decoration: none;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 34px;
+        color: $color-1;
+          
+        & .nav-active {
+          text-decoration: underline;
+        }
+      }
+    }
   }
-  & li {
-    list-style: none;
-    padding-bottom: 4px;
-  }
-  & a {
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 34px;
-    color: $color-1;
-  }
-  & .nav-active {
-    text-decoration: underline;
-  }
+
 }
 
 @media (max-width: 1001px) {
-  
   .header {
-    width: 100%;
-     max-height: 15px;
-    justify-content:start;
-    padding-bottom: 50px;
+    height: 80px;
+    padding: 1em;
     & .header-logo img {
-      height: 47px;
-      width: 145px;
+      height: 40px;
+      margin-top: 5px;
+      // width: 145px;
+    }
+    & ul {
+     gap: 0.5rem;
+     // line-height: 142.6%;
+     margin: 0;
+      
+    }
+    & p {
+     font-size: 12px;
+     text-transform: uppercase;
     }
   }
-  .header-nav .ul-nav {
-    gap: 1rem;
-    line-height: 142.6%;
-    justify-content: center;
-  }
-  .header-nav p {
-    font-size: 12px;
-    text-transform: uppercase;
-  }
- 
+  
+}
+
+@media (max-width: 400px){
+.header .header-logo img {
+  height: 25px;
+  padding-top: 24px;
+} 
+  .header li p{
+     font-size: 8px;
+     text-transform: uppercase;
+    }
 }

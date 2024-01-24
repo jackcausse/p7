@@ -7,18 +7,14 @@ import datas from '../data/datas.json'
 import { NavLink } from 'react-router-dom'
 
 const Home = () => {
-  // data.forEach((e) => {
-  //   console.log(e)
-  // })
 
   return (
-    <div className='home'>
-      <Main >
+    <Main>
+      <div className='home'>
         <Banner img={bannerHome} text='Chez vous, partout et ailleurs' />
         <div className='cards'>
           {datas.map((index) => (
-            
-            <NavLink key={index.id} to={`/card/:id/${index.id}`}>
+            <NavLink key={index.id} to={`/card/${index.id}`}>
               <Cards
                 key={index.id}
                 id={index.id}
@@ -28,8 +24,8 @@ const Home = () => {
             </NavLink>
           ))}
         </div>
-      </Main>
-    </div>
+      </div>
+    </Main>
   )
 }
 

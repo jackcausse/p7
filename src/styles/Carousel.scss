@@ -1,0 +1,40 @@
+@import './variables.scss';
+
+.carousel {
+  // border: 6px solid rgb(212, 36, 139);
+  // background-color: rgb(218, 134, 25);
+  //  position: relative;
+  height: 100px;
+  width: 100%;
+  // margin-top: 30px;
+  & img {
+
+    //  position: absolute;
+    color: color-2;
+    top: 40%;
+    cursor: pointer;
+    width: 46.68px;
+    // height: 79.2px;
+    flex-shrink: 0;
+  }
+  &img.carousel-next {
+    // border: 2px solid rgb(17, 87, 61);
+    // position: absolute;
+    color: color-1;
+    cursor: pointer;
+    // width: 46.68px;
+    height: 79.2px;
+    flex-shrink: 0;
+
+  }
+
+  & counter {
+    border: 2px solid rgb(17, 87, 86);
+  }
+
+  & p {
+    border: 2px solid rgb(20, 202, 199);
+  }
+}
+
+

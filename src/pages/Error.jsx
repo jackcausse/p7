@@ -1,11 +1,11 @@
 import React from 'react'
-import {useRouteError, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import Main from '../Layout/Main.jsx'
 
 function Error() {
 
   return (
-   
+    <Main>
       <div className='error'>
         <h1>404</h1>
         <h2>Oups! la page que vous avez demandez n'existe pas.</h2>
@@ -14,7 +14,7 @@ function Error() {
           Retourner sur la page d’accueil
         </Link>
       </div>
- 
+    </Main>
   )
 }
 export default Error

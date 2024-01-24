@@ -1,20 +1,15 @@
 import React from 'react'
-import {NavLink} from 'react-router-dom'
+import {NavLink, Link} from 'react-router-dom'
 
 function Header() {
   return (
     <div className='header'>
       <div className='header-logo'>
-        {/* {' '}
-        <ul>
-          <li>
-            {' '} */}
-            <NavLink to='/'>
+      
+            <Link to='/'>
               {/* Sans source le navigateur va chercher le logo dans le dossier public */}
               <img className='logo' src='logo.png' alt='logo Kasa' />
-             </NavLink>
-          {/* </li>
-         </ul>{' '}  */}
+             </Link>
       </div>
 
       <div className='header-nav'>
