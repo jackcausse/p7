@@ -5,18 +5,12 @@
   align-self: center;
   text-align: center;
   justify-content: space-between;
-  // color: $color-1;
   font-weight: 700;
   height: 69px;
-  // height: 100%;
   padding: 20px 80px 50px 80px;
   & .logo {
-    // height: 68px;
-    // display: block;
     flex-shrink: 0;
     margin-top: 20px;
-    // margin: 0;
-    
   }
   & ul {
     display: flex;
@@ -25,8 +19,6 @@
     & li {
       list-style: none;
       font-size: 24px;
-      // padding-bottom: 4px;
-      // margin: 0;
       & a {
         text-decoration: none;
         font-size: 24px;
@@ -34,9 +26,9 @@
         line-height: 34px;
         color: $color-1;
           
-        & .nav-active {
-          text-decoration: underline;
-        }
+      }
+      & .nav-active {
+        text-decoration: underline;
       }
     }
   }
@@ -50,13 +42,10 @@
     & .header-logo img {
       height: 40px;
       margin-top: 5px;
-      // width: 145px;
     }
     & ul {
      gap: 0.5rem;
-     // line-height: 142.6%;
-     margin: 0;
-      
+     margin: 0; 
     }
     & p {
      font-size: 12px;
