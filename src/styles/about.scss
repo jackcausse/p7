@@ -1,23 +1,14 @@
 @import './variables.scss';
 
-about {
-   margin-bottom: 500px;
-  
-  & .about-dropdown {
-    margin-bottom: 500px;
-    padding-bottom: 100px;
+.about {
+  margin-bottom: 8rem;
+  .about-dropdown {
+    padding-inline: 6rem;
   }
 
   @media only screen and (max-width: 1001px) {
-    .about .about-dropdown {
-    margin-bottom: 500px;
-    padding-bottom: 100px;
-  }
-
-    .about .Banner img {
-      // height: 50px;
-      height: 200%;
-      width: 100%;
+    .about-dropdown {
+      padding-inline: 0;
     }
   }
 }

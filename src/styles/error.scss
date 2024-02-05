@@ -5,20 +5,20 @@
   text-align: center;
   margin-bottom: 4rem;
    min-height: 65px;
-  h1 {
+  & h1 {
     font-size: 288px;
     margin-bottom: 0.5rem;
     font-weight: 700;
   }
 
-  h2 {
+  & h2 {
     font-size: 36px;
     font-weight: 500;
     line-height: 142.6%;
     padding-bottom: 112px;
   }
 
-  a {
+  & a {
     font-size: 18px;
     color: $color-1;
     text-decoration: underline;

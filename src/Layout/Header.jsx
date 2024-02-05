@@ -1,6 +1,6 @@
 import React from 'react'
 import {NavLink, Link} from 'react-router-dom'
-
+import logo from '../assets/logo.png'
 function Header() {
   return (
     <div className='header'>
@@ -8,7 +8,7 @@ function Header() {
       
             <Link to='/'>
               {/* Sans source le navigateur va chercher le logo dans le dossier public */}
-              <img className='logo' src='logo.png' alt='logo Kasa' />
+              <img className='logo' src='logo' alt='logo Kasa' />
              </Link>
       </div>
 

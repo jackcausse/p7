@@ -9,7 +9,7 @@ const About = () => {
   return (
     <Main className='up'>
       <div className='about'>
-        <Banner img={bannerAbout} title='bannerAbout' />
+        <Banner img={bannerAbout} title='Monts enneigées' />
 
         <div className='about-dropdown'>
           {aboutDatas.map((item, index) => (

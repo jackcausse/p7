@@ -15,7 +15,7 @@ const Card = () => {
   console.log(Location)
 
   const [indexPicture, setIndexPicture] = useState(0),
-    length = Location.pictures.length -1,
+    length = Location.pictures.length - 1,
     arrowPrevious = () => {
       // setIndexPicture(length)
       console.log(indexPicture == 0)
@@ -39,6 +39,9 @@ const Card = () => {
       else setIndexPicture(indexPicture + 1)
     }
 
+  // const equipments = Location.equipments.map((element, i) => (
+  //   <li className='description-content' key={'equipements'+i}>{element}</li>
+  // ))
 
   return (
     <Main>
@@ -67,59 +70,64 @@ const Card = () => {
           )}
 
           <p className='counter'>
-            {indexPicture + 1}/{length}
+            {indexPicture + 1}/{length + 1}
           </p>
         </div>
 
         {/* titre, emplacement et tags */}
-        <div className='card-logements'>
-          <div className='card-description'>
-            <h1>{Location.title}</h1>
-            <h2>{Location.location}</h2>
+        
+          <div className='card-logements'>
+            <div className='card-description'>
+              <h1>{Location.title}</h1>
+              <h2>{Location.location}</h2>
 
-            <div className='card-description-tags'>
-              {Location.tags.map((element, index) => {
-                return (
-                  <span className='tags' key={index}>
-                    {element}
-                  </span>
-                )
-              })}
-            </div>
-          </div>
-
-          {/* nom, photo de l'hôte et notation */}
-          <div className='card-host'>
-            <div className='host'>
-              <span>{Location.host.name}</span>
-              {/* <spam className='lastName'>{location.host.name}</spam> : */}
-              <img
-                className='host-picture'
-                src={Location.host.picture}
-                alt=''></img>
+              <div className='card-description-tags'>
+                {Location.tags.map((element, tags) => {
+                  return (
+                    <span className='tags' key={tags}>
+                      {element}
+                    </span>
+                  )
+                })}
+              </div>
             </div>
 
-            <div className='card-rating'>
-              {arrayStars.map((element) => {
-                const numberStars = parseInt(Location.rating)
-                return (
-                  <span
-                    key={'star'}
-                    className={element <= numberStars ? 'on' : 'off'}>
-                    ★
-                  </span>
-                )
-              })}
+            {/* nom, photo de l'hôte et notation */}
+           
+            <div className='card-host'>
+              <div className='host'>
+                <span className='span'>{Location.host.name}</span>
+                <img
+                  className='host-picture'
+                  src={Location.host.picture}
+                  alt=''></img>
+              </div>
+
+              <div className='card-rating'>
+                {arrayStars.map((element) => {
+                  const numberStars = parseInt(Location.rating)
+                  return (
+                    <span
+                      // key={'star' + element}
+                      className={element <= numberStars ? 'on' : 'off'}>
+                      ★
+                    </span>
+                  )
+                })}
+              </div>
             </div>
-          </div>
         </div>
-
+        
         {/* description, équipements */}
         <div className='card-dropdown'>
           <DropDown title='description' content={Location.description} />
-          <DropDown title='equipements' content={Location.equipments} />
+          <DropDown
+            title='equipements'
+            content={Location.equipments.map((eq, i) => (
+              <li key={i}>{eq}</li>
+            ))}
+          />
         </div>
-        
       </div>
     </Main>
   )
