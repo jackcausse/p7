@@ -21,6 +21,7 @@ const Home = () => {
           alt='Côte rocheuse'
           text={'Chez vous, partout et ailleurs'}
         />
+
         <div className='cards'>
           {datas.map((index) => (
             <NavLink key={index.id} to={`/card/${index.id}`}>

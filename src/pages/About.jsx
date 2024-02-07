@@ -7,7 +7,7 @@ import aboutDatas from '../data/aboutDatas.json'
 
 const About = () => {
   return (
-    <Main className='up'>
+    <Main>
       <div className='about'>
         <Banner img={bannerAbout} title='Monts enneigées' />
 

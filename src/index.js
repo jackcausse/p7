@@ -16,10 +16,10 @@ root.render(
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="card/:id" element={<Card />} />
-        <Route path="about" element={<About />} />
-        <Route path="*" element={<Error />} />
+        <Route path='/' element={<Home />} />
+        <Route path='card/:id' element={<Card />} />
+        <Route path='about' element={<About />} />
+        <Route path='*' element={<Error />} />
       </Routes>
       <Footer />
     </BrowserRouter>

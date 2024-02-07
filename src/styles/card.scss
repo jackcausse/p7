@@ -1,13 +1,13 @@
 @import './variables.scss';
 
-.card-items {
+.card-container {
   color: $color-1;
 
   .card {
     margin-top: 4px;
     border-radius: 25px;
     position: relative;
-    height: 20rem;
+    height: 10rem;
     // height: 100%;
     width: 100%;
 
@@ -36,6 +36,9 @@
       }
     }
 
+    .card-title {
+      font-size: 12px;
+    }
     .button {
       position: absolute;
       width: 4.5rem;
@@ -48,7 +51,11 @@
       &.button-next {
         right: 0;
       }
-
+      // img {
+      //   button {
+      //     height: 10px;
+      //   }
+      // }
       @media screen and (min <= 700px) {
         .button {
           width: 5px;
@@ -86,10 +93,11 @@
     }
     .card-description {
       display: flex;
-      flex-direction: column;
+      // flex-direction: column;
       color: $color-1;
       margin-top: 1.5em;
       flex-grow: 1;
+
       & h1 {
         font-size: 36px;
         margin-top: 0;
@@ -180,6 +188,7 @@
           // order: 1;
           margin-left: 0;
         }
+
         span {
           // border: 1px solid rgb(65, 226, 50);
           text-align: right;
@@ -209,6 +218,7 @@
           }
         }
       }
+
       .card-rating {
         display: flex;
         margin-top: 0px;
@@ -234,25 +244,25 @@
       }
     }
   }
-}
 
-// -----------------------------------
-.card-dopdown {
-  display: flex;
-  gap: 1rem;
-
-  ul {
-    background: $color-4;
-    li {
-      list-style: none;
-      color: $color-1;
-      vertical-align: inherit;
-      padding: 0;
+  // -----------------------------------
+  .card-dopdown {
+    display: flex;
+    gap: 1rem;
+    background: $color-1;
+    &ul {
+      background: $color-4;
+      &li {
+        list-style: none;
+        background: $color-1;
+        // color: $color-1;
+        vertical-align: inherit;
+        padding: 0;
+      }
     }
-}
   }
 
-// ----------------------------------
+  // ----------------------------------
 
   @media screen and (max-width: 700px) {
     // au format mobile, le compteur n'est pas affiché
@@ -260,3 +270,4 @@
       opacity: 0;
     }
   }
+}

@@ -42,7 +42,7 @@
 
   .img {
     height: 100%;
-     height: 223px;
+    height: 223px;
     width: 100%;
     object-fit: cover;
     border-radius: 25px;
@@ -51,9 +51,9 @@
 }
 @media only screen and (max-width: 1001px) {
   .banner {
-     height: 110px;
-border-radius: 10px;
-// filter: brightness(0.8);
+    height: 110px;
+    border-radius: 10px;
+    // filter: brightness(0.8);
     &::after {
       border-radius: 10px;
     }
@@ -66,9 +66,8 @@ border-radius: 10px;
       // justify-content: center;
       // align-items: flex-start;
     }
-    }
+  }
   .bannerAbout {
     height: 250px;
   }
-  
 }
