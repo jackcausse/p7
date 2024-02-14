@@ -4,9 +4,11 @@ function Banner({text, text1, text2, img, alt}) {
   return (
     <div className='banner'>
       <div className='banner-text'>
-        {text}
-        <p>{text1}</p>
-        <p>{text2}</p>
+        {/* {text} */}
+        <span>{text1}</span>
+        <span>{text2}</span>
+        {/* <p>{text3}</p> */}
+        {/* <p>{text4}</p> */}
       </div>
 
       <img className='img' src={img} alt='bannière paysage' />

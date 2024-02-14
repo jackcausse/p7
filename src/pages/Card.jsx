@@ -55,6 +55,7 @@ const Card = () => {
 
           {length > 0 && (
             <div>
+
               <span className='button button-previous'>
                 <img src={arrowLeft} alt={arrowLeft} onClick={arrowPrevious} />
               </span>
@@ -105,7 +106,7 @@ const Card = () => {
                 const numberStars = parseInt(Location.rating)
                 return (
                   <span
-                    // key={'star' + element}
+                    key={'star' + element}
                     className={element <= numberStars ? 'on' : 'off'}>
                     ★
                   </span>
@@ -117,10 +118,10 @@ const Card = () => {
 
         {/* description, équipements */}
         <div className='card-dropdown'>
-          <DropDown title='description' content={Location.description} />
+          <DropDown title='Description' content={Location.description} />
 
           <DropDown
-            title='equipements'
+            title='Équipements'
             content={Location.equipments.map((equipment, index) => (
               <span key={index}>{equipment}</span>
             ))}

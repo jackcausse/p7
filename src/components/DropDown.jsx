@@ -5,10 +5,10 @@ import arrowDown from '../assets/arrowDown.png'
 
 const DropDown = ({title, content, list = false}) => {
   //creation du useState pour l'ouverture et la fermeture du drop  de base > fermé
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false) || {}
   console.log(content)
 
-  //creation de la fonction pour l'ouverture du collapse au click
+  //création de la fonction pour l'ouverture du collapse au click
   const click = () => {
     setOpen(!open)
   }
@@ -21,7 +21,7 @@ const DropDown = ({title, content, list = false}) => {
           <img src={arrowDown} alt={arrowDown} />
         </span>
       </div>
-
+    
       {!Array.isArray(content)
         ? <div className='dropdown-content'>{content}</div>
         : 

@@ -10,18 +10,13 @@ const Home = () => {
   return (
     <Main>
       <div className='home'>
-        {/* <Banner
-          img={bannerHome}
-          alt='Côte rocheuse'
-          text1='Chez vous,'
-          text2=' partout et ailleurs'
-        /> */}
         <Banner
           img={bannerHome}
           alt='Côte rocheuse'
-          text={'Chez vous, partout et ailleurs'}
+          text1='Chez vous, '
+          text2=' partout et ailleurs'
         />
-
+      
         <div className='cards'>
           {datas.map((index) => (
             <NavLink key={index.id} to={`/card/${index.id}`}>

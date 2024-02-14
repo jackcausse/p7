@@ -1,9 +1,10 @@
 @import './variables.scss';
 
 .about {
-  margin-bottom: 8rem;
+  margin-bottom: rem;
   .about-dropdown {
-    padding-inline: 6rem;
+    padding-inline: 7rem;
+    padding-bottom: 3rem;
   }
 
   @media only screen and (max-width: 1001px) {

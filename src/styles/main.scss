@@ -1,11 +1,15 @@
 @import './variables.scss';
 
 .main {
-  padding: 2rem 5rem 8rem 5rem;
+  padding: 2rem 6rem 8rem 6rem;
 }
-@media screen and (max-width: 1417px) {
-
-  .main {
-    padding: 1em;
-  }
+// @media screen and (max-width: 1417px) {
+//   .main {
+//     padding: 1.25em;
+// }
+// }
+@media screen and (max-width: 950px) {
+.main {
+  padding: 0 1.25em 1.25em 1.25em;
+ } 
 }
