@@ -6,7 +6,7 @@
   text-align: center;
   justify-content: space-between;
   font-weight: 700;
-  height: 68px;
+  height: 50px;
   padding: 20px 95px 0 95px;
   & .logo {
     flex-shrink: 0;
@@ -35,6 +35,7 @@
 
 @media (max-width: 950px) {
   .header {
+    // height: 50px;
     padding-inline: 19px;
     padding-top: 1em;
     padding-bottom: 0;

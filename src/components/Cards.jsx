@@ -12,12 +12,3 @@ const Cards = ({ id, img, title }) => {
 }
 
 export default Cards
-// const getData = () => Promise.resolve('data');
-// const getMoreData = () => Promise.resolve('more data');
-
-// Promise.all(
-//   getData(),
-//   getMoreData()
-// ).then(result => {
-//   const [data, moreData] = result;
-// })

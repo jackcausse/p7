@@ -19,7 +19,7 @@
         width: 100%;
         height: 100%;
         opacity: 0;
-        transition: opacity 0.5s ease-in-out;
+        transition: opacity .5s ease-in-out;
 
         &.on {
           opacity: 1;
@@ -47,9 +47,10 @@
     .button {
       position: absolute;
       width: 4.5rem;
-      top: 35%;
+      top: 40%;
       cursor: pointer;
-
+// inset: 0;
+// content: "";
       &.button-previous {
         left: 0;
         text-align: right;
@@ -79,8 +80,8 @@
       }
 
       .button {
-        width: 2em;
-        top: 12em;
+        width: 1.3em;
+        top: 48%;
       }
       img {
         height: 20px;
@@ -93,7 +94,9 @@
   }
   @media screen and (max-width: 950px) {
     .card {
-      height: 15rem;
+      height: 16rem;
+         margin-top: 10px;
+         border-radius: 10px;
     }
   }
   //--------------------------------------------
@@ -113,7 +116,7 @@
       flex-grow: 1;
 
       @media screen and (width<= 950px) {
-        margin-top: 0.8rem;
+        margin-top: 0.3rem;
       }
       & h1 {
         font-size: 36px;
@@ -278,17 +281,18 @@
   .card-dopdown {
     display: flex;
     gap: 1rem;
-    background: $color-1;
-    &ul {
-      background: $color-4;
-      &li {
-        list-style: none;
-        background: $color-1;
-        vertical-align: inherit;
-        padding: 0;
-      }
-    }
+    // background: $color-1;
   }
+  .car-dropdown .dopdown-rod .false ul {
+      background: $color-4;
+    }
+    .card-dopdown-false .dropdown-text ul li {
+      list-style: none;
+      background: $color-1;
+      vertical-align: inherit;
+      padding: 0;
+    }
+  
 
   // ----------------------------------
 
