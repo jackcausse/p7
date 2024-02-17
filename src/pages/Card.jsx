@@ -1,18 +1,24 @@
 import React, {useState} from 'react'
-import {useParams} from 'react-router-dom'
+import { useParams, Navigate  } from 'react-router-dom'
+
 import Main from '../Layout/Main.jsx'
 import data from '../data/datas.json'
 import DropDown from '../components/DropDown.jsx'
 import arrowLeft from '../assets/arrowLeft.png'
 import arrowRight from '../assets/arrowRight.png'
 
+// tableau pour le nombre d'étoiles rouges ou grises
 const arrayStars = [1, 2, 3, 4, 5]
 
+// Card affiche les informations d'un appartement
 const Card = () => {
   const {id} = useParams(),
     Location = data.find((item, _i) => item.id == id)
-  console.log(id)
-  console.log(Location)
+   
+  // hook Navigate qui redirige vers la page 404 en cas d'erreur dans l'url du navigateur
+  //   const Navigate = Navigate()
+  // if (!Location) Navigate('*')
+
 
   const [indexPicture, setIndexPicture] = useState(0),
     length = Location.pictures.length - 1,
@@ -23,18 +29,13 @@ const Card = () => {
       console.log(length)
 
       if (indexPicture == 0) {
-        console.log('là')
         setIndexPicture(length)
       } else {
-        console.log('pas 0')
         setIndexPicture(indexPicture - 1)
       }
-
-      console.log(indexPicture == 0)
-      console.log(indexPicture)
-    },
-    arrowNext = () => {
-      console.log('eeee')
+    }
+    , arrowNext = () => {
+   
       if (indexPicture == length) setIndexPicture(0)
       else setIndexPicture(indexPicture + 1)
     }

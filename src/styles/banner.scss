@@ -5,8 +5,8 @@
   position: relative;
   height: 223px;
   max-width: 100%;
-  margin-top: 50px;
-  margin-bottom: 30px;
+  margin-top: 65px;
+  margin-bottom: 45px;
   text-align: center;
 
   .banner-text {
@@ -23,6 +23,7 @@
     font-weight: 500;
     color: $color-3;
     z-index: 1;
+    gap: 1rem;
   }
 
   .img {
@@ -30,7 +31,7 @@
     height: 223px;
     width: 100%;
     object-fit: cover;
-    border-radius: 25px;
+    border-radius:25px;
     filter: brightness(0.7);
   }
 }
@@ -39,9 +40,9 @@
   .banner {
     height: 110px;
     border-radius: 10px;
-    // margin-top: 10px;
     margin-bottom: 20px;
-padding-top: 12px;
+// padding-top: 12px;
+
     // filter: brightness(0.8);
     &::after {
       border-radius: 10px;
@@ -52,6 +53,7 @@ padding-top: 12px;
     & .banner-text {
       font-size: 24px;
       font-weight: 400;
+      gap: 2em;
       white-space: pre-line;
       flex-flow: wrap;
       flex-direction: column;
@@ -59,16 +61,18 @@ padding-top: 12px;
       justify-content: center;
       padding-left: 0.8em;
       line-height: 102.6%; /* 25.668px */
+      gap: 0;
     }
   }
 
   .bannerAbout {
     height: 250px;
+    margin-top: 1em;
   }
 }
 
 @media only screen and (max-width: 950px) {
   .banner {
-    margin-top: 0.4em;
+    margin-top: 2em;
   }
 }

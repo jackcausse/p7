@@ -1,6 +1,6 @@
 
 // import {useState} from 'react'
-import React, {useState} from 'react'
+import React, { useState} from 'react'
 import arrowDown from '../assets/arrowDown.png'
 
 const DropDown = ({title, content, list = false}) => {
@@ -24,10 +24,10 @@ const DropDown = ({title, content, list = false}) => {
 
       {!Array.isArray(content) ? (
         <div key={content} className='dropdown-content'>
-          <ul> {content}</ul>
+           {content}
         </div>
       ) : (
-        <ul>
+        <ul className='dropdown-content'>
           {content.map((item) => (
             <li>{item}</li>
           ))}
