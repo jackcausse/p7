@@ -16,19 +16,8 @@ const Home = () => {
           text1='Chez vous, '
           text2=' partout et ailleurs'
         />
-      
-        <div className='cards'>
-          {datas.map((index) => (
-            <NavLink key={index.id} to={`/card/${index.id}`}>
-              <Cards
-                key={index.id}
-                id={index.id}
-                img={index.cover}
-                title={index.title}
-              />
-            </NavLink>
-          ))}
-        </div>
+      <Cards />
+        
       </div>
     </Main>
   )

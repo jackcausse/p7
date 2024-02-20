@@ -1,29 +1,34 @@
 import React, {useState} from 'react'
-import { useParams, Navigate  } from 'react-router-dom'
-
+import {useParams, useNavigate} from 'react-router-dom'
 import Main from '../Layout/Main.jsx'
 import data from '../data/datas.json'
 import DropDown from '../components/DropDown.jsx'
 import arrowLeft from '../assets/arrowLeft.png'
 import arrowRight from '../assets/arrowRight.png'
-
+import Error from './Error'
 // tableau pour le nombre d'étoiles rouges ou grises
 const arrayStars = [1, 2, 3, 4, 5]
 
 // Card affiche les informations d'un appartement
 const Card = () => {
+  // récupère l'id dans la barre d'adresse du navigateur
   const {id} = useParams(),
     Location = data.find((item, _i) => item.id == id)
-   
-  // hook Navigate qui redirige vers la page 404 en cas d'erreur dans l'url du navigateur
-  //   const Navigate = Navigate()
-  // if (!Location) Navigate('*')
 
+  // hook Navigate qui redirige vers la page 404 en cas d'erreur dans l'url du navigateur
+  ,navigate = useNavigate()
+  // // console.log(Navigate)
+  // if (!Location) return <navigate replace to  />
+  if (!Location) {
+      navigate('*')
+    }
+  // if (!Location) return <Error />
+  // if (!location) return <navigate to='/Error'replace={true }/>
 
   const [indexPicture, setIndexPicture] = useState(0),
     length = Location.pictures.length - 1,
     arrowPrevious = () => {
-      // setIndexPicture(length)
+      setIndexPicture(length)
       console.log(indexPicture == 0)
       console.log(indexPicture)
       console.log(length)
@@ -33,17 +38,14 @@ const Card = () => {
       } else {
         setIndexPicture(indexPicture - 1)
       }
-    }
-    , arrowNext = () => {
-   
+    },
+    arrowNext = () => {
       if (indexPicture == length) setIndexPicture(0)
       else setIndexPicture(indexPicture + 1)
     }
-
   return (
     <Main>
       {/* pictures */}
-      {console.log(indexPicture + ' xxx')}
       <div className='card-container'>
         <div className='card'>
           <ul>
@@ -56,7 +58,6 @@ const Card = () => {
 
           {length > 0 && (
             <div>
-
               <span className='button button-previous'>
                 <img src={arrowLeft} alt={arrowLeft} onClick={arrowPrevious} />
               </span>

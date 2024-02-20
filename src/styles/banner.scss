@@ -5,7 +5,6 @@
   position: relative;
   height: 223px;
   max-width: 100%;
-  margin-top: 65px;
   margin-bottom: 45px;
   text-align: center;
 
@@ -41,7 +40,7 @@
     height: 110px;
     border-radius: 10px;
     margin-bottom: 20px;
-// padding-top: 12px;
+padding-top: 12px;
 
     // filter: brightness(0.8);
     &::after {
@@ -71,8 +70,8 @@
   }
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 300px) {
   .banner {
-    margin-top: 2em;
+    padding-top: 0;
   }
 }

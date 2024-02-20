@@ -1,7 +1,7 @@
 @import './variables.scss';
 
 .about {
-  margin-bottom: rem;
+  // margin-bottom: 10rem;
 
   .banner {
     height: 223px;
@@ -9,7 +9,7 @@
   
   .about-dropdown {
     padding-inline: 7rem;
-    padding-bottom: 3rem;
+    // padding-bottom: 3rem;
   }
 
   @media only screen and (max-width: 1001px) {

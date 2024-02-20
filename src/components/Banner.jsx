@@ -1,10 +1,9 @@
 import React from 'react'
 
-function Banner({text, text1, text2, img, alt}) {
+function Banner({text1, text2, img}) {
   return (
     <div className='banner'>
       <div className='banner-text'>
-        {/* {text} */}
         <span>{text1}</span>
         <span>{text2}</span>
       </div>

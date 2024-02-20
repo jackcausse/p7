@@ -1,14 +1,9 @@
-
-// import {useState} from 'react'
-import React, { useState} from 'react'
+import React, {useState} from 'react'
 import arrowDown from '../assets/arrowDown.png'
 
 const DropDown = ({title, content, list = false}) => {
-  //creation du useState pour l'ouverture et la fermeture du drop  de base > fermé
   const [open, setOpen] = useState(false) || {}
-  console.log(content)
 
-  //création de la fonction pour l'ouverture du collapse au click
   const click = () => {
     setOpen(!open)
   }
@@ -23,13 +18,11 @@ const DropDown = ({title, content, list = false}) => {
       </div>
 
       {!Array.isArray(content) ? (
-        <div key={content} className='dropdown-content'>
-           {content}
-        </div>
+        <div className='dropdown-content'>{content}</div>
       ) : (
-        <ul className='dropdown-content'>
+        <ul className='dropdown-content'>  
           {content.map((item) => (
-            <li>{item}</li>
+            <li key={item}>{item}</li>
           ))}
         </ul>
       )}
@@ -38,5 +31,3 @@ const DropDown = ({title, content, list = false}) => {
 }
 
 export default DropDown
-
-

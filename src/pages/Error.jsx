@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom'
 import Main from '../Layout/Main.jsx'
 
 function Error() {
-
   return (
     <Main>
       <div className='error'>
