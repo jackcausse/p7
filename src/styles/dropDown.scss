@@ -1,36 +1,37 @@
 @import './variables.scss';
 
 .dropdown-rod {
-  font-size: 24px;
-  font-weight: 400;
   flex-basis: 50%;
-border-radius: 10px;
-gap: 5em;
-}
+// gap: 5em;
 
+}
+// .dropdown-rod .open {
+// padding-bottom: 820px;
+// }
 .dropdown-title {
   display: flex;
-  width: auto;
-  max-height: 47px;
+  font-size: 24px;
   background-color: $color-1;
   color: $color-3;
-  border-radius: 5px;
-  padding: 0 35px 0 20px;
+  border-radius: 10px;
+  height: 62px;
   align-items: center;
-  margin-bottom: 28px;
+  margin-bottom: 40px;
   // cursor: pointer;
+  gap: 8px;
 }
 
 .dropdown-text {
-  font-size: 18px;
+  font-size: 30px;
   font-weight: 500;
   width: 100%;
   display: flex;
   flex-shrink: 1;
   justify-content: space-between;
+  margin-left:20px;
 }
 
-.dropdown-content {
+.dropdown-content,.dropdown-content-ul {
   visibility: hidden;
   height: 0;
   opacity: 0;
@@ -40,15 +41,17 @@ gap: 5em;
   position: relative;
    line-height: 142.6%; /* 34.224px */
   vertical-align: inherit;
-  // transition: transform 1.3s ease-in-out;
+  transition: transform 1.3s ease-in-out;
 }
 
-.open .dropdown-content {
+.open .dropdown-content, .dropdown-content-ul{
   visibility: visible;
   opacity: 1;
   background: $color-4;
   color: $color-1;
   padding: 45px 27px 8px 18px;
+  font-size: 32px;
+  font-weight: 400;
   height: auto;
   line-height: 142.6%; /* 34.224px */
   position: relative;
@@ -56,14 +59,15 @@ gap: 5em;
   z-index: -1;
   border-radius: 5px;
   overflow: hidden;
- transition: transform .2s ease-in-out;
-//  transition: visibility .4s ease-in-out,opacity .4s ease-in-out,
-//  height .4s ease-in-out;
 }
 
- .dropdown-img {
+
+ .dropdown-img img{
 cursor: pointer;
 font-weight: bold;
+margin: 40px;
+height: 20px;
+// width: 30px;
 }
 
 .open .dropdown-img {
@@ -77,27 +81,26 @@ font-weight: bold;
   transition: all .2s ease-in-out;
 }
 
-@media only screen and (max-width: 950px) {
-
-  .dropdown-rod {
-    font-size: 22px;
-    padding: 0;
-  }
-
+@media screen and (max-width: 950px) {
+.dropdown-title {
+  height: 45px;
+}
   .dropdown-text {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
   }
-  .open .dropdown-content{
-    // padding: 45px 20px 0px 10px;
-    font-size: 12px;
+  .open .dropdown-content,.dropdown-content-ul{
+    padding: 45px 27px 80px 18px;
+    font-size: 16px;
   }
+
   .dropdown-title {
-    height: 30px;
-    margin-bottom: .9em;
+    height: 40px;
+    margin-bottom: 1.1em;
   }
   .dropdown-img img {
-    // width: 18.42px;
-    height: 8.42px;
+    width: 26px;
+    height: 14px;
+    margin: 8px;
   }
 }

@@ -1,11 +1,11 @@
-import React, {useState} from 'react'
-import {useParams, useNavigate} from 'react-router-dom'
+import React, {useState, useEffect} from 'react'
+import {useParams, useNavigate, Navigate} from 'react-router-dom'
 import Main from '../Layout/Main.jsx'
 import data from '../data/datas.json'
 import DropDown from '../components/DropDown.jsx'
 import arrowLeft from '../assets/arrowLeft.png'
 import arrowRight from '../assets/arrowRight.png'
-import Error from './Error'
+
 // tableau pour le nombre d'étoiles rouges ou grises
 const arrayStars = [1, 2, 3, 4, 5]
 
@@ -16,17 +16,22 @@ const Card = () => {
     Location = data.find((item, _i) => item.id == id)
 
   // hook Navigate qui redirige vers la page 404 en cas d'erreur dans l'url du navigateur
-  ,navigate = useNavigate()
+   
+  
+ 
   // // console.log(Navigate)
   // if (!Location) return <navigate replace to  />
-  if (!Location) {
-      navigate('*')
-    }
+  //  , navigate = useNavigate()
+//   useEffect((item, i) => {
+//   if (!Location) {
+//       navigate('/404')
+//   }
+// }, [])
   // if (!Location) return <Error />
   // if (!location) return <navigate to='/Error'replace={true }/>
 
   const [indexPicture, setIndexPicture] = useState(0),
-    length = Location.pictures.length - 1,
+    length = Location?.pictures.length - 1,
     arrowPrevious = () => {
       setIndexPicture(length)
       console.log(indexPicture == 0)
@@ -46,16 +51,16 @@ const Card = () => {
   return (
     <Main>
       {/* pictures */}
+      {!Location && <Navigate to='/404' replace={true} />}
       <div className='card-container'>
         <div className='card'>
           <ul>
-            {Location.pictures.map((item, _i) => (
+            {Location?.pictures.map((item, _i) => (
               <li key={item} className={_i == indexPicture ? 'on' : ''}>
                 <img src={item} alt={'image_+ i'} />
               </li>
             ))}
           </ul>
-
           {length > 0 && (
             <div>
               <span className='button button-previous'>
@@ -67,7 +72,6 @@ const Card = () => {
               </span>
             </div>
           )}
-
           <p className='counter'>
             {indexPicture + 1}/{length + 1}
           </p>
@@ -77,11 +81,11 @@ const Card = () => {
 
         <div className='card-logements'>
           <div className='card-description'>
-            <h1>{Location.title}</h1>
-            <h2>{Location.location}</h2>
+            <h1>{Location?.title}</h1>
+            <h2>{Location?.location}</h2>
 
             <div className='card-description-tags'>
-              {Location.tags.map((element, tags) => {
+              {Location?.tags.map((element, tags) => {
                 return (
                   <span className='tags' key={tags}>
                     {element}
@@ -95,17 +99,17 @@ const Card = () => {
 
           <div className='card-host'>
             <div className='host'>
-              <span className='span'>{Location.host.name}</span>
+              <span className='span'>{Location?.host.name}</span>
 
               <img
                 className='host-picture'
-                src={Location.host.picture}
+                src={Location?.host.picture}
                 alt=''></img>
             </div>
 
             <div className='card-rating'>
               {arrayStars.map((element) => {
-                const numberStars = parseInt(Location.rating)
+                const numberStars = parseInt(Location?.rating)
                 return (
                   <span
                     key={'star' + element}
@@ -120,12 +124,17 @@ const Card = () => {
 
         {/* description, équipements */}
         <div className='card-dropdown'>
-          <DropDown title='Description' content={Location.description} />
+          <DropDown
+            keys={1}
+            title='Description'
+            content={Location?.description}
+          />
 
           <DropDown
+            keys={2}
             title='Équipements'
-            content={Location.equipments.map((equipment, index) => (
-              <span key={index}>{equipment}</span>
+            content={Location?.equipments.map((equipments, index) => (
+              <span key={index}>{equipments}</span>
             ))}
           />
         </div>

@@ -2,17 +2,16 @@
 
 .card-container {
   color: $color-1;
-margin-top: 1.5em;
+  padding-top: 0.4em;
 
-@media screen and (max-width: 950px) { 
-  
+  @media screen and (max-width: 950px) {
+    padding-top: 1.5em;
   }
   .card {
     border-radius: 25px;
     position: relative;
-    height: 26rem;
     width: 100%;
-
+    height: 555px;
     ul {
       margin: 0;
       padding: 0;
@@ -22,8 +21,7 @@ margin-top: 1.5em;
         width: 100%;
         height: 100%;
         opacity: 0;
-        transition: opacity .5s ease-in-out;
-
+        transition: opacity 0.5s ease-in-out;
         &.on {
           opacity: 1;
         }
@@ -37,6 +35,9 @@ margin-top: 1.5em;
         object-fit: cover;
       }
       @media screen and (max-width: 950px) {
+        .card-container .card {
+          height: 5em;
+        }
         img {
           border-radius: 10px;
         }
@@ -50,12 +51,12 @@ margin-top: 1.5em;
     .button {
       position: absolute;
       cursor: pointer;
-    height: 50px;
-top: calc(45% - 25px);
+      height: 90px;
+      top: calc(45% - 25px);
+
       &.button-previous {
         left: 1.5rem;
         text-align: right;
-         
       }
 
       &.button-next {
@@ -63,39 +64,41 @@ top: calc(45% - 25px);
         right: 1.5rem;
       }
     }
-
+    img {
+      height: 120px;
+    }
     .counter {
       color: $color-3;
       position: absolute;
       width: 100%;
       bottom: 1rem;
       text-align: center;
-      font-size: 18px;
+      font-size: 24px;
       font-weight: 500;
       border-color: transparent;
     }
 
     @media screen and (max-width: 950px) {
-      // .card-container .card {
-      //   height: 15rem;
-      //   border-radius: 10px;
-      //   height: none;
-      // }
+      .card {
+        height: 1rem;
+        height: none;
+      }
 
       .button {
         width: 1.3em;
-        top: 48%;
-      
-      &.button-previous {
-        left: 0;
+        top: 45%;
+        // top: calc(45% - 10px);
+
+        &.button-previous {
+          left: 10px;
+        }
+        &.button-next {
+          right: 15px;
+        }
+        img {
+          height: 30px;
+        }
       }
-      &.button-next {
-        right: 0;
-      }
-      img {
-        height: 20px;
-      }
-    }
       // au format mobile, le compteur n'est pas affiché
       .counter {
         opacity: 0;
@@ -103,11 +106,9 @@ top: calc(45% - 25px);
     }
   }
   @media screen and (max-width: 950px) {
-    
     .card {
-      height: 16rem;
-        //  margin-top: 45px;
-         border-radius: 10px;
+      height: 21.4rem;
+      border-radius: 10px;
     }
   }
   //--------------------------------------------
@@ -115,9 +116,12 @@ top: calc(45% - 25px);
   .card-logements {
     display: flex;
     width: 100%;
-    margin-bottom: 1rem;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
     @media screen and (max-width: 950px) {
       flex-direction: column;
+      margin-top: 0.5em;
     }
     .card-description {
       display: flex;
@@ -130,94 +134,83 @@ top: calc(45% - 25px);
         margin-top: 0.3rem;
       }
 
-       @media screen and (max-width: 360px) {
-        margin-bottom: 2rem;
-      }
+      // @media screen and (max-width: 360px) {
+      //   margin-bottom: 2em;
+      // }
       & h1 {
         display: flex;
-        font-size: 36px;
+        font-size: 48px;
         margin-top: 0;
         margin-bottom: 0;
         font-weight: 500;
         margin: block;
-        // line-height: 12.6%; /* 51.336px */
+        // line-height: 120%; /* 51.336px */
         top: 0;
         bottom: 0;
         margin-right: auto;
       }
       & h2 {
-        font-size: 18px;
+        font-size: 24px;
         font-weight: 500;
         margin-top: 0;
         margin-bottom: 1em;
-        line-height: 142.6%; /* 25.668px */
+        line-height: 182%; /* 25.668px */
       }
 
       @media screen and (max-width: 950px) {
         h1 {
-          font-size: 18px;
-          line-height: 192.6%; /* 19.964px */
+          font-size: 24px;
+          line-height: 145%; /* 19.964px */
           width: 80%;
+          margin-bottom: 0px;
         }
         h2 {
-          font-size: 14px;
+          font-size: 18px;
+          margin-bottom: 0.7em;
         }
       }
 
       .card-description-tags {
         display: flex;
-        gap: 1rem;
-        padding-bottom: 0.6em;
-        // white-space: nowrap;
-//  width: 700px;   
-// height: 26px;
-flex-wrap: wrap; 
+        gap: 1em;
+        // padding-bottom: 0.6em;
+        flex-wrap: wrap;
         @media screen and (max-width: 950px) {
           gap: 0.8em;
-          height: 20px;
-          padding-bottom: 0;
         }
-// @media screen and (width <= 300px) {
-//   margin-bottom: 3em;
-// }
+
         .tags {
           display: flex;
-          border-radius: 10px;
+          flex-wrap: wrap;
+          border-radius: 15px;
           background: $background-1;
           color: $color-3;
-          // padding: 0.3em 2em;
           flex-shrink: 0;
-          font-size: 14px;
+          font-size: 18px;
           justify-content: center;
-          text-align: center;
-          align-items: center;
-         min-width: 150px;
-        height: 20px;
-
-          // line-height: 142.6%; /* 19.964px */
+          // text-align: center;
+          width: 150px;
+          // align-items: center;
+          height: 35px;
+          line-height: 210%; /* 19.964px */
         }
 
         @media screen and (max-width: 950px) {
-          
-       
           .tags {
-            // padding: 0.3em 0.3em;
-            font-size: 10px;
-            border-radius: 5px;
-       min-width: 100px;
-            // gap: 0.3em;
+            font-size: 14px;
+            border-radius: 7px;
+            min-width: 100px;
+            height: 25px;
           }
         }
 
-           @media screen and (max-width:  495px) {
-          
-       
-         .card-description {
-             padding-bottom: 2em;
+        //     @media screen and (max-width: 495px) {
+        //       .card-description {
+        //         padding-bottom: 2em;
+        //       }
+        //     }
       }
     }
-    }
-  }
     // ------------------------------------------------------
 
     .card-host {
@@ -226,71 +219,81 @@ flex-wrap: wrap;
       margin-left: auto;
       margin-right: 0.5em;
       text-align: right;
-
+      padding-top: 1.5em;
       @media screen and (max-width: 950px) {
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
         margin: 0;
         align-items: center;
-        margin-top: 0.8em;
+        // margin-top: 1.5em;
       }
+      // @media screen and (max-width: 950px) {
+      //   //   // order: 1;
+      //   //   margin: 0;
+      //   //   align-items: left;
+      //   margin-top: 0;
+      // }
+
       .host {
         display: flex;
         text-align: right;
         font-weight: 500;
-        font-size: 18px;
+        font-size: 24px;
         align-items: right;
         margin-left: auto;
         gap: 0.8rem;
-        margin-top: 1.2em;
+        // margin-top: 1.2em;
         width: min-content;
-        @media screen and (max-width <= 950px) {
-          // order: 1;
+        // padding-top: 0.2em;
+
+        @media screen and (max-width: 950px) {
           margin: 0;
           align-items: left;
         }
 
         span {
           text-align: right;
-          margin-top: 0.4em;
-          // width: 35%;
+          line-height: 143%; /* 19.964px */
+          margin-top: 0.5em;
+          width: 35%;
         }
-
         @media screen and (max-width: 950px) {
-          // order: 1;
-          gap: 0.5em;
-          font-size: 14px;
-          // width: min-content;
+          span {
+            gap: 0.5em;
+            font-size: 16px;
+            line-height: 134%;
+            margin-top: 0;
+          }
         }
 
-        @media screen and (max-width: 950px) {
-          font-size: 12px;
+        @media screen and (max-width: 300px) {
+          span {
+            font-size: 12px;
+          }
         }
-
         .host-picture {
-          width: 64px;
-          height: 64px;
+          width: 84px;
+          height: 84px;
           border-radius: 50%;
           flex-shrink: 0;
           margin-left: auto;
         }
-
         @media screen and (max-width: 950px) {
-          img.host-picture {
-            width: 36px;
-            height: 36px;
+          .host-picture {
+            width: 46px;
+            height: 46px;
           }
         }
       }
 
       .card-rating {
         display: flex;
-        margin-top: 0px;
+        margin-top: 0.3em;
         align-items: center;
         gap: 0.2rem;
         flex-shrink: 0;
-        font-size: 2.5rem;
+        font-size: 3.5em;
         &.on {
           color: $color-1;
         }
@@ -301,6 +304,7 @@ flex-wrap: wrap;
       @media screen and (max-width: 950px) {
         .card-rating {
           margin: 0;
+          font-size: 2rem;
         }
         .card-rating span {
           font-size: 24px;
@@ -315,30 +319,48 @@ flex-wrap: wrap;
   // -----------------------------------
   .card-dropdown {
     display: flex;
-    gap: 1rem;
+    gap: 6rem;
   }
 
-  // .car-dropdown .dopdown-rod .false ul {
-  //     background: $color-4;
-  //   }
-     li {
-      list-style: none;
+  .card-dropdown .dropdown-text {
+    font-size: 24px;
+  }
 
-      // vertical-align: inherit;
-      // padding: 0;
-    }
+  .card-dropdown .dropdown-content {
+    font-size: 24px;
+    padding: 45px 27px 40px 18px;
+  }
+
+  li {
+    list-style: none;
+  }
   @media screen and (max-width: 950px) {
-  .card-dropdown {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    // width: 100%;
-  }
-  }
+    .card-dropdown {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      padding-top: 0.3em;
+    }
+    .card-dropdown .dropdown-text {
+      font-size: 16px;
+      padding-bottom: 0;
+      padding-left: 20px;
+      margin: 0;
+    }
 
+    .card-dropdown .open .dropdown-content {
+      font-size: 16px;
+      padding-bottom: 2px;
+      // padding:45px 27px 220px 18px;
+    }
+
+    .dropdown-img img {
+      height: 15px;
+    }
+  }
   // ----------------------------------
 
-//  responsive 
+  //  responsive
   @media screen and (max-width: 950px) {
     // au format mobile, le compteur n'est pas affiché
     .counter {
