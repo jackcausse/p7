@@ -21,7 +21,7 @@ const Card = () => {
  
   // // console.log(Navigate)
   // if (!Location) return <navigate replace to  />
-  //  , navigate = useNavigate()
+   , navigate = useNavigate()
 //   useEffect((item, i) => {
 //   if (!Location) {
 //       navigate('/404')
@@ -50,7 +50,9 @@ const Card = () => {
     }
   return (
     <Main>
+      
       {/* pictures */}
+
       {!Location && <Navigate to='/404' replace={true} />}
       <div className='card-container'>
         <div className='card'>
@@ -77,8 +79,8 @@ const Card = () => {
           </p>
         </div>
 
+        
         {/* titre, emplacement et tags */}
-
         <div className='card-logements'>
           <div className='card-description'>
             <h1>{Location?.title}</h1>
@@ -95,8 +97,8 @@ const Card = () => {
             </div>
           </div>
 
+          
           {/* nom, photo de l'hôte et notation */}
-
           <div className='card-host'>
             <div className='host'>
               <span className='span'>{Location?.host.name}</span>
@@ -122,6 +124,7 @@ const Card = () => {
           </div>
         </div>
 
+        
         {/* description, équipements */}
         <div className='card-dropdown'>
           <DropDown

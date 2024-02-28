@@ -1,18 +1,17 @@
 @import './variables.scss';
 
 .about {
-  padding-top: 2.2em;
+  // padding-top: .8em;
+  
   .banner {
-    height: 299px;
+    height: 223px;
   }
 
   .about-dropdown {
     padding-top: 42px;
     padding-inline: 7em;
-  }
 
-  @media only screen and (max-width: 950px) {
-    .about-dropdown {
+    @media (max-width: 950px) {
       padding-top: 0.28em;
       padding-inline: 0;
       padding-top: 0;
@@ -20,9 +19,3 @@
     }
   }
 }
-
-
-
-
-
-
