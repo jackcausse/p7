@@ -13,20 +13,17 @@ const arrayStars = [1, 2, 3, 4, 5]
 const Card = () => {
   // récupère l'id dans la barre d'adresse du navigateur
   const {id} = useParams(),
-    Location = data.find((item, _i) => item.id == id)
+    Location = data.find((item, _i) => item.id == id),
+    // hook Navigate qui redirige vers la page 404 en cas d'erreur dans l'url du navigateur
 
-  // hook Navigate qui redirige vers la page 404 en cas d'erreur dans l'url du navigateur
-   
-  
- 
-  // // console.log(Navigate)
-  // if (!Location) return <navigate replace to  />
-   , navigate = useNavigate()
-//   useEffect((item, i) => {
-//   if (!Location) {
-//       navigate('/404')
-//   }
-// }, [])
+    // // console.log(Navigate)
+    // if (!Location) return <navigate replace to  />
+    navigate = useNavigate()
+  //   useEffect((item, i) => {
+  //   if (!Location) {
+  //       navigate('/404')
+  //   }
+  // }, [])
   // if (!Location) return <Error />
   // if (!location) return <navigate to='/Error'replace={true }/>
 
@@ -50,7 +47,6 @@ const Card = () => {
     }
   return (
     <Main>
-      
       {/* pictures */}
 
       {!Location && <Navigate to='/404' replace={true} />}
@@ -79,7 +75,6 @@ const Card = () => {
           </p>
         </div>
 
-        
         {/* titre, emplacement et tags */}
         <div className='card-logements'>
           <div className='card-description'>
@@ -97,7 +92,6 @@ const Card = () => {
             </div>
           </div>
 
-          
           {/* nom, photo de l'hôte et notation */}
           <div className='card-host'>
             <div className='host'>
@@ -124,7 +118,6 @@ const Card = () => {
           </div>
         </div>
 
-        
         {/* description, équipements */}
         <div className='card-dropdown'>
           <DropDown

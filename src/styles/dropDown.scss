@@ -2,6 +2,10 @@
 
 .dropdown-rod {
   flex-basis: 50%;
+  @media (max-width: 950px) {
+  flex-basis: 0;
+  }
+
 }
 
 .dropdown-title {
@@ -13,7 +17,6 @@
   height: 47px;
   align-items: center;
   margin-bottom: 28px;
-  // cursor: pointer;
 
   @media (max-width: 950px) {
     height: 30px;
@@ -43,12 +46,11 @@
   height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: all 0.2s ease-in-out;
   border-radius: 10px;
   position: relative;
   line-height: 142.6%; /* 34.224px */
   vertical-align: inherit;
-  transition: transform 1.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .open .dropdown-content,
@@ -76,25 +78,18 @@
 
 .dropdown-img {
   cursor: pointer;
-  font-weight: bold;
-  margin: 40px;
-  height: 20px;
-  // width: 35px;
-
+  font-size: 30px;
+padding: 30px;
   @media (max-width: 950px) {
-    // width: 24px;
-    height: 26px;
-    margin: 8px;
+    font-size: 18px;
+    padding: 5px;
   }
 }
 
 .open .dropdown-img {
-  flex-shrink: 0;
   transform: rotate(180deg);
-  transition: all 0.2s ease-in-out;
 }
 
 .false .dropdown-img {
   transform: rotate(0deg);
-  transition: all 0.2s ease-in-out;
 }

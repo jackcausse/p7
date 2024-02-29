@@ -3,8 +3,6 @@ import Banner from '../components/Banner.jsx'
 import Cards from '../components/Cards.jsx'
 import Main from '../Layout/Main.jsx'
 import bannerHome from '../assets/bannerHome.jpg'
-import datas from '../data/datas.json'
-import {NavLink} from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -16,8 +14,7 @@ const Home = () => {
           text1='Chez vous, '
           text2=' partout et ailleurs'
         />
-      <Cards />
-        
+        <Cards />
       </div>
     </Main>
   )

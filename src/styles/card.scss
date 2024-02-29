@@ -2,12 +2,15 @@
 
 .card-container {
   color: $color-1;
-  // padding-top: 0.4em;
+
 
   @media (max-width: 950px) {
-    padding-top: .5em;
+    padding-top: 1.5em;
   }
 
+
+  // card
+// -------------------------------------
   .card {
     border-radius: 25px;
     position: relative;
@@ -51,71 +54,39 @@
       font-size: 12px;
     }
 
-    // .button {
-    //   position: absolute;
-    //   cursor: pointer;
-    //   // height: 50px;
-    //   top: calc(45% - 25px);
-
-    //   @media (max-width: 950px) {
-    //     width: 1.3em;
-    //     top: 48%;
-    //     top: calc(45% - 10px);
-    //   }
-    //   .button .button-previous {
-    //     left: 1.5rem;
-    //     text-align: right;
-    //     @media (max-width: 950px) {
-    //       left: 0;
-    //     }
-    //   }
-
-    //    .button .button-next {
-    //     right: 0;
-    //     // right: 1.5rem;
-
-    //     @media (max-width: 950px) {
-    //       right: 15px;
-    //     }
-    //   }
-    // }
     .button {
       position: absolute;
       cursor: pointer;
-     
+
       top: calc(45% - 25px);
 
       @media (max-width: 950px) {
-      
         // width: 1.3em;
         top: 48%;
       }
 
       &.button-previous {
         left: 1.5rem;
-        
+
         @media (max-width: 950px) {
-          left: .3em;
+          left: 0.3em;
         }
       }
 
       &.button-next {
-     
         right: 1.5em;
         @media (max-width: 950px) {
-          right: .3em;
-          
+          right: 0.3em;
         }
       }
-    
 
-    img {
-      height: 80px;
-      @media (max-width: 950px) {
-        height: 20px;
+      img {
+        height: 80px;
+        @media (max-width: 950px) {
+          height: 20px;
+        }
       }
     }
-}
     .counter {
       color: $color-3;
       position: absolute;
@@ -133,7 +104,10 @@
       }
     }
   }
-  //--------------------------------------------
+
+
+// card logements
+  //------------------------------------
 
   .card-logements {
     display: flex;
@@ -156,9 +130,6 @@
         margin-top: 0.3rem;
       }
 
-      // @media screen and (max-width: 360px) {
-      //   margin-bottom: 2em;
-      // }
       & h1 {
         display: flex;
         font-size: 36px;
@@ -194,31 +165,28 @@
       .card-description-tags {
         display: flex;
         gap: 1em;
-        padding-bottom: 0.6em;
         flex-wrap: wrap;
         @media (max-width: 950px) {
           gap: 0.8em;
-          height: 20px;
           padding-bottom: 0;
         }
 
         .tags {
           display: flex;
-          // flex-wrap: wrap;
           border-radius: 10px;
           background: $background-1;
           color: $color-3;
-          flex-shrink: 0;
+          // flex-shrink: 0;
           font-size: 14px;
           justify-content: center;
           align-items: center;
           width: 150px;
-          line-height: 210%; /* 19.964px */
           height: 26px;
+          line-height: 210%; /* 19.964px */
 
           @media (max-width: 950px) {
             font-size: 10px;
-            
+            height: 20px;
             border-radius: 5px;
             width: 100px;
             //  line-height: 25%; /* 19.964px */
@@ -231,15 +199,12 @@
         }
       }
     }
-    // ------------------------------------------------------
+
+
+// cars host
+    // ---------------------------------
 
     .card-host {
-      display: flex;
-      flex-direction: column;
-      margin-left: auto;
-      margin-right: 0.5em;
-      text-align: right;
-      padding-top: 1.5em;
 
       @media screen and (max-width: 950px) {
         display: flex;
@@ -248,27 +213,16 @@
         margin: 0;
         align-items: center;
         margin-top: 0;
-        padding-top: 0.5em;
+        padding-top: 1em;
       }
-      @media (max-width: 496px) {
-        // order: 1;
-        //   margin: 0;
-        //   align-items: left;
-        // margin-top: 0;
-        margin-top: 2em;
-      }
+
 
       .host {
         display: flex;
-        text-align: right;
-        font-weight: 500;
-        font-size: 18px;
         align-items: right;
         margin-left: auto;
         gap: 0.8rem;
-        // margin-top: 1.2em;
         width: min-content;
-        // padding-top: 0.2em;
 
         @media (max-width: 950px) {
           margin: 0;
@@ -276,15 +230,15 @@
         }
 
         span {
-          text-align: right;
           line-height: 143%; /* 19.964px */
           margin-top: 0.5em;
           width: 35%;
-
+          font-weight: 500;
+          font-size: 18px;
           @media (max-width: 950px) {
             gap: 0.5em;
             font-size: 12px;
-            line-height: 134%;
+            // line-height: 134%;
             margin-top: 0;
           }
 
@@ -329,6 +283,9 @@
     }
   }
 
+
+
+// card dropdown
   // -----------------------------------
   .card-dropdown {
     display: flex;
@@ -339,7 +296,6 @@
       display: flex;
       flex-direction: column;
       gap: 0;
-      // padding-top: 0.3em;
       margin-top: 0;
     }
 
@@ -348,9 +304,8 @@
     }
     .dropdown-text {
       font-size: 18px;
-      // padding: 20px;
       @media (max-width: 950px) {
-        font-size: 16px;
+        font-size: 14px;
         padding-bottom: 0;
         padding-left: 20px;
         margin: 0;
@@ -359,11 +314,9 @@
 
     .dropdown-content {
       font-size: 18px;
-      padding: 45px 27px 40px 18px;
-
+margin-bottom:50px;
       @media (max-width: 950px) {
-        font-size: 16px;
-        padding: 45px 27px 0px 18px;
+        font-size: 12px;
       }
     }
 
@@ -372,7 +325,7 @@
     }
 
     .dropdown-img {
-      height: 16px;
+      height: 25px;
       font-weight: bold;
 
       @media (max-width: 950px) {
@@ -380,13 +333,6 @@
       }
     }
   }
-  // ----------------------------------
+  // -----------------------------------
 
-  //  responsive
-  @media (max-width: 950px) {
-    // au format mobile, le compteur n'est pas affiché
-    .counter {
-      opacity: 0;
-    }
-  }
 }
