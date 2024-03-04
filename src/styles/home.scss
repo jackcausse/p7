@@ -1,10 +1,9 @@
 @import './variables.scss';
 
+.home {
+  margin-top: 2.5em;
 
-  .home {
- margin-top: 2.5em;
-
-@media (max-width: 950px) {
-    margin-top: 0
-}
+  @media (max-width: 950px) {
+    margin-top: 0em;
+  }
 }

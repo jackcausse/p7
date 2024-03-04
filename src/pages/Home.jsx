@@ -4,6 +4,7 @@ import Cards from '../components/Cards.jsx'
 import Main from '../Layout/Main.jsx'
 import bannerHome from '../assets/bannerHome.jpg'
 
+// page Home
 const Home = () => {
   return (
     <Main>

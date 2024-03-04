@@ -1,16 +1,14 @@
 @import './variables.scss';
 
 .card-container {
-  color: $color-1;
-
-
   @media (max-width: 950px) {
-    padding-top: 1.5em;
+    padding-top: 0.5em;
   }
 
+  // -------------------------------------
+  // card pictures
+  // -------------------------------------
 
-  // card
-// -------------------------------------
   .card {
     border-radius: 25px;
     position: relative;
@@ -105,8 +103,8 @@
     }
   }
 
-
-// card logements
+  //------------------------------------
+  // card logements
   //------------------------------------
 
   .card-logements {
@@ -137,7 +135,7 @@
         margin-bottom: 0;
         font-weight: 500;
         margin: block;
-        // line-height: 120%; /* 51.336px */
+        line-height: 120%; /* 51.336px */
         top: 0;
         bottom: 0;
         margin-right: auto;
@@ -200,12 +198,11 @@
       }
     }
 
-
-// cars host
+    // ---------------------------------
+    // cars host
     // ---------------------------------
 
     .card-host {
-
       @media screen and (max-width: 950px) {
         display: flex;
         flex-direction: row-reverse;
@@ -215,7 +212,6 @@
         margin-top: 0;
         padding-top: 1em;
       }
-
 
       .host {
         display: flex;
@@ -235,6 +231,7 @@
           width: 35%;
           font-weight: 500;
           font-size: 18px;
+          color: $color-1;
           @media (max-width: 950px) {
             gap: 0.5em;
             font-size: 12px;
@@ -283,10 +280,10 @@
     }
   }
 
-
-
-// card dropdown
   // -----------------------------------
+  // card dropdown
+  //------------------------------------
+
   .card-dropdown {
     display: flex;
     gap: 6rem;
@@ -314,7 +311,7 @@
 
     .dropdown-content {
       font-size: 18px;
-margin-bottom:50px;
+      // margin-bottom:50px;
       @media (max-width: 950px) {
         font-size: 12px;
       }
@@ -334,5 +331,4 @@ margin-bottom:50px;
     }
   }
   // -----------------------------------
-
 }

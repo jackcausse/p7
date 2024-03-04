@@ -2,6 +2,7 @@ import React from 'react'
 import data from '../data/datas.json'
 import {Link} from 'react-router-dom'
 
+// le composant Cards utilisé dans la page card et la page Home
 const Cards = () => {
   return (
     <div className='cards'>

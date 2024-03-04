@@ -9,7 +9,7 @@
   padding: 40px 95px 0px 95px;
   height: 72px;
   @media (max-width: 950px) {
-    padding: 13px 20px 0px 20px;
+    padding: 15px 20px 0px 20px;
     height: 55px;
   }
 
@@ -66,10 +66,9 @@
       @media (max-width: 400px) {
         font-size: 10px;
       }
-
-      & .nav-active {
-        text-decoration: underline;
-      }
+    }
+    & .nav-active {
+      text-decoration: underline;
     }
   }
 }

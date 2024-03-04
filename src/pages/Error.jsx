@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import Main from '../Layout/Main.jsx'
 
+// page Error
 function Error() {
   return (
     <Main>

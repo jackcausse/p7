@@ -7,25 +7,22 @@
   color: $color-1;
   align-items: center;
 
-  @media (max-width: 950px) {
-    padding-bottom: 40em;
-  }
-
   & h1 {
     display: block;
     font-size: 288px;
-    padding-top: 5px;
     font-weight: 700;
-    line-height: 64%;
-    margin-bottom: 98px;
+    line-height: 60%;
+    margin-bottom: 80px;
 
     @media (max-width: 950px) {
-      padding-top: 10px;
+      vertical-align: 550px;
       font-size: 96px;
+      margin: 200px 0 15px 0;
     }
   }
 
   & h2 {
+    display: flex;
     justify-content: center;
     text-align: center;
     font-size: 36px;
@@ -35,7 +32,6 @@
     @media (max-width: 950px) {
       font-size: 18px;
       font-weight: 500;
-      text-align: center;
       line-height: 142.6%; /* 25.668px */
     }
   }
@@ -45,7 +41,7 @@
     color: $color-1;
     font-weight: 500;
     text-decoration: underline;
-    padding-top: 205px;
+    padding-top: 115px;
 
     @media (max-width: 950px) {
       font-size: 14px;

@@ -1,6 +1,7 @@
 import React from 'react'
 import logoFooter from '../assets/logoFooter.png'
 
+// le composant Footer est affiché sur toutes les pages
 function Footer() {
   return (
     <div className='footer'>
